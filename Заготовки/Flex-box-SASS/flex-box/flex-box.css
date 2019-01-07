@@ -1,0 +1,100 @@
+.flex-direction {
+	display: flex;
+	/*flex-direction направление главной оси
+	свойства: row | row-reverse | column | column-reverse */
+	flex-direction: column-reverse; 
+}
+
+.flex-wrap {
+	display: flex;
+	/* сетка или линия по умолчанию nowrap(линия)
+	flex-wrap: nowrap | wrap | wrap-reverse*/
+	flex-wrap: wrap-reverse;
+	width: 350px;
+	height: 150px;
+}
+
+.justify-content {
+	display: flex;
+	/* justify-content
+	Помогает распределить оставшееся свободное место в случае, 
+	когда элементы строки не «тянутся», либо тянутся, 
+	но уже достигли своего максимального размера
+	flex-start | flex-end | center | space-between | space-around*/
+	justify-content: flex-end;
+}
+
+.align-items {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	/*Определяет поведение по умолчанию для того, 
+	как flex-элементы располагаются относительно поперечной оси на текущей строке. 
+	Считайте это версией 
+	justify-content для поперечной оси (перпендикулярной к основной).
+	flex-start | flex-end | center | baseline | stretch
+	*/
+	/*
+			baseline: элементы выравниваются по своей базовой линии;
+			stretch (по умолчанию): элементы растягиваются, 
+			заполняя контейнер (с учётом min-width/max-width)
+	*/
+}
+	
+.align-content {
+	display: flex;
+	flex-direction: column;
+	align-content: space-around;
+	height: 70px;
+	flex-wrap: wrap;
+	/* Выравнивает строки flex-контейнера при наличии
+	свободного места на поперечной оси аналогично тому,
+	как это делает justify-content на главной оси.
+	align-content: flex-start | flex-end | center |
+	space-between | space-around | stretch */
+}
+.order{
+	display: flex;
+	 /* свойство order может 
+ управлять порядком их расположения в контейнере. */
+	order: 3;
+}
+.flex-grow{
+	 /* смотреть index.html (возможность рости) */
+	display: flex;
+	flex-grow: 2;
+}
+.flex-shrink{
+	/* Определяет для flex-элемента возможность сжиматься
+	 при необходимости. */
+	display: flex
+}
+.flex-shrink-div{
+	width: 1270px;
+	flex-shrink: 1;
+}
+.flex{
+	display: flex
+	 /* Это сокращение для flex-grow, flex-shrink и flex-basis.
+	 	 Второй и третий параметры (flex-shrink, flex-basis)
+	 	 необязательны. Значение по умолчанию — 0 1 auto. */}
+.flex-div{
+	flex: 1 1	}
+
+.align-self{
+	display: flex;
+	flex-direction: column;
+	min-height: 500px;
+ /* Позволяет переопределить выравнивание, */
+ /* заданное по умолчанию или в align-items,  */
+ /* для отдельных flex-элементов. */
+ /* Обратитесь к описанию свойства align-items  */
+ /* для лучшего понимания доступных значений. */
+ /* align-self: auto | flex-start | flex-end  */
+ /* | center | baseline | stretch */
+}
+
+.align-self-div{
+	flex-grow: 1;
+	align-self: flex-end;
+}

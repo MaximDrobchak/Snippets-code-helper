@@ -1,0 +1,22 @@
+body {
+	width: 99vw;
+	height: 99vh;
+	padding: 40px;
+}
+
+body > div {
+	background:  lightslategray;
+	border: 1.5px solid greenyellow;
+	width: 500px;
+	height: 100px;
+	padding: 25.5px;
+	margin-bottom: 30px;
+}
+
+body > div > div {
+	width: 75px;
+	height: 75px;
+	border: 1px solid blue;
+	background: lightpink;
+	margin-left: 5px;
+}

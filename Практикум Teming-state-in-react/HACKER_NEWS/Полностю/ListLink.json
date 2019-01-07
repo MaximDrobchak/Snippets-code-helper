@@ -1,0 +1,167 @@
+[
+	{
+		"id": 1000,
+		"title": "Список основных библиотек React-Redux",
+		"link": "https://github.com/markerikson/react-redux-links"
+	},
+  {
+		"id": 0,
+		"title": "Локальное хранилеще Браузеров",
+		"link": "https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage"
+	},
+	{
+		"id": 1,
+		"title": "Сессийное  хранилеще Браузеров",
+		"link": "https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage"
+	},
+	{
+		"id": 2,
+		"title": "Как использовать Local Storage in React .",
+		"link": "https://www.robinwieruch.de/local-storage-react/"
+	},
+	{
+		"id": 3,
+		"title": "Библиотеки основных реактивов в 2018 году",
+		"link": "https://www.robinwieruch.de/essential-react-libraries-framework/"
+	},
+	{
+		"id": 4,
+		"title": "Что нужно узнать в React перед использованием Redux",
+		"link": "https://www.robinwieruch.de/learn-react-before-using-redux/"
+	},
+	{
+		"id": 5,
+		"title": "Официальный веб-сайт Redux",
+		"link": "http://redux.js.org/"
+	},
+	{
+		"id": 6,
+		"title": "Concat в JS",
+		"link": "https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Array/concat"
+	},
+	{
+		"id": 7,
+		"title": "React & Redux page .",
+		"link": "https://github.com/taming-the-state-in-react/taming-the-state-in-react-portuguese/blob/master/manuscript/04-redux-react/00-redux-in-react.md"
+	},
+	{
+		"id": 8,
+		"title": "react-redux",
+		"link": "https://github.com/reactjs/react-redux"
+	},
+	{
+		"id": 9,
+		"title": "Вывод консоли redux-logger",
+		"link": "https://github.com/evgenyrodionov/redux-logger"
+	},
+	{
+		"id": 10,
+		"title": "Нормализация данных normalizr",
+		"link": "https://github.com/paularmstrong/normalizr"
+	},
+	{
+		"id": 11,
+		"title": "Работа с Селкторами reselect",
+		"link": "https://github.com/reactjs/reselect"
+	},
+	{
+		"id": 12,
+		"title": "redux-thunk Асинхронные действия Redux",
+		"link": "https://github.com/gaearon/redux-thunk"
+	},
+	{
+		"id": 13,
+		"title": "REDUX-SAGA Асинхронные действия Redux",
+		"link": "https://github.com/redux-saga/redux-saga"
+	},
+	{
+		"id": 14,
+		"title": "Redux Observable Асинхронные действия Redux",
+		"link": "https://github.com/redux-observable/redux-observable"
+	},
+	{
+		"id": 15,
+		"title": "Redux Cycles Асинхронные действия Redux",
+		"link": "https://github.com/cyclejs-community/redux-cycles"
+	},
+	{
+		"id": 16,
+		"title": "Организация Уток",
+		"link": "https://github.com/erikras/ducks-modular-redux"
+	},
+	{
+		"id": 17,
+		"title": "deep-freeze Тестирование",
+		"link": "https://github.com/substack/deep-freeze"
+	},
+	{
+		"id": 18,
+		"title": "инструкцией по тестированию React и прохождением использования ",
+		"link": "https://www.robinwieruch.de/react-testing-tutorial/"
+	},
+	{
+		"id": 19,
+		"title": "Redux Ecosystem Links",
+		"link": "https://github.com/markerikson/redux-ecosystem-links"
+	},
+	{
+		"id": 20,
+		"title": "Redux DevTools",
+		"link": "https://github.com/gaearon/redux-devtools"
+	},
+	{
+		"id": 21,
+		"title": "Секреты и возможности Redux",
+		"link": "https://github.com/taming-the-state-in-react/taming-the-state-in-react-portuguese/blob/master/manuscript/05-redux-advanced/05-redux-outline.md"
+	},
+	{
+		"id": 22,
+		"title": "redux-actions",
+		"link": "https://github.com/redux-utilities/redux-actions"
+	},
+	{
+		"id": 23,
+		"title": "redux-form",
+		"link": "https://github.com/erikras/redux-form"
+	},
+	{
+		"id": 24,
+		"title": "Сщздание таблиц сортировка фильтрация и т.п.",
+		"link": "https://github.com/SmallImprovements/react-redux-composable-list"
+	},
+	{
+		"id": 25,
+		"title": "React-router & react-redux",
+		"link": "https://redux.js.org/advanced/usagewithreactrouter"
+	},
+	{
+		"id": 26,
+		"title": "Server redux",
+		"link": "https://redux.js.org/recipes/serverrendering"
+	},
+	{
+		"id": 27,
+		"title": "MobX",
+		"link": "https://mobx.js.org/"
+	},
+	{
+		"id": 28,
+		"title": "mobx-react-devtools",
+		"link": "https://github.com/mobxjs/mobx-react-devtools"
+	},
+	{
+		"id": 29,
+		"title": "Mobx-React",
+		"link": "https://github.com/mobxjs/mobx-react"
+	},
+	{
+		"id": 30,
+		"title": "Robin Советы по изучению React + Redux",
+		"link": "https://www.robinwieruch.de/tips-to-learn-react-redux/"
+	},
+	{
+		"id": 31,
+		"title": "Robin Советы по изучению React + Redux",
+		"link": "https://www.robinwieruch.de/tips-to-learn-react-redux/"
+	}
+]

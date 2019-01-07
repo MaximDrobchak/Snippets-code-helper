@@ -1,0 +1,164 @@
+# https://github.com/the-road-to-graphql/the-road-to-graphql/blob/master/manuscript/04-graphql-fundamentals/index.md
+
+# СНИЗУ БЕЗ КОМЕНТОВ РАБОЧИЙ ВАРИАНТ !!
+
+# query получает данные об нужных организациях
+# Robin , Name, Eges, Facebook имена которые присвоил чтобы небыло конфликтов
+query Organization($login: String!, $withFork: Boolean! ) {
+		# определим переменную для динамики сама переменная определяеться с низу в JSON 
+  Robin: organization(login: $login) {
+			# определение фрагмента снизу сразу после query
+			# так же можно указывать поля например id , name и т.д.
+			# но так динамичней
+   ...sharedOrganizationFields
+  Name: repository(name: $login) {
+      id
+      name 
+			# если $withFork тогда показываем fortCount 
+			# значение $withFork определяеться с низу в JSON 
+			# как и всех абсолютно переменных
+		  forkCount @include(if: $withFork)
+    }
+		# Здесь происходи пагинация сначала без after: (в cursor получаем ключ)
+		# выполнить исходный запрос без аргумента курсора
+		# выполнять каждый следующий запрос с помощью 
+		# курсора курсора последнего элемента из предыдущего результата запроса
+    # Для динамики вместо MQ можно подставить переменную
+	 RepRobin: repositories(last: 2, after: "WQ",orderBy: {field: CREATED_AT,direction: ASC }) {
+				# также из задания orderBy с запросом создать и направление
+      edges {
+        node {
+          name
+        }
+				# мета-инфа для поля after: получили 
+				# "MQ" --> Ето ключ к следуещей странице
+				cursor
+      }
+    }
+  }
+
+	# Второй способ заключаеться : место cursor 
+Facebook: organization(login: "facebook") {
+		# определение фрагмента снизу сразу после query
+       ...sharedOrganizationFields
+      repository(name: "react") {
+        id
+      name
+      }
+		RepFacebook: repositories(first: 2) {
+			totalCount
+			edges {
+				node {
+					name
+				}
+			}
+			# totalCount Поле описывает общее количество элементов в списке,
+			# в то время как pageInfo поле дает информацию о двух вещах:
+			pageInfo {
+				#  endCursorможет использоваться для извлечения последовательного списка
+        endCursor
+				# hasNextPageдает вам информацию о том, есть ли следующая страница для извлечения из API GraphQL.
+        hasNextPage
+      }
+    }
+  }
+}
+	# опредления самого врагмента довольно просто просто указаваим поля
+ fragment sharedOrganizationFields on Organization {
+  name
+  url
+}
+
+# добавление звезды Робину
+mutation AddStar($repositoryIdRobin: ID!) {
+  addStar(input: { starrableId: $repositoryIdRobin }) {
+    starrable {
+      id
+      viewerHasStarred
+    }
+  }
+}
+
+# добавление звезды React
+mutation AddStarFacebook($repositoryIdReact: ID!) {
+  addStar(input:  { starrableId: $repositoryIdReact }) {
+   starrable {
+      id
+      viewerHasStarred
+    }
+  }
+}
+
+{
+  "repositoryIdRobin": "MDEwOlJlcG9zaXRvcnk2MzM1MjkwNw==",
+  "repositoryIdReact": "MDEwOlJlcG9zaXRvcnkxMDI3MDI1MA==",
+  "login": "the-road-to-learn-react",
+  "withFork": true
+}
+					# Тот же вариант только без коментариев
+query Organization($login: String!, $withFork: Boolean! ) {
+  Robin: organization(login: $login) {
+    ...sharedOrganizationFields
+  Name: repository(name: $login) {
+      id
+      name 
+    forkCount @include(if: $withFork)
+    }
+    RepRobin: repositories(last: 2, after: "WQ",orderBy: {field: CREATED_AT,direction: ASC }) {
+   		
+      edges {
+        node {
+          name
+        }
+			cursor
+      }  
+    }
+  }
+
+	Facebook: organization(login: "facebook") {
+        ...sharedOrganizationFields
+      repository(name: "react") {
+        id
+      name
+      }
+		RepFacebook: repositories(first: 2) {
+			totalCount
+			edges {
+				node {
+					name
+				}
+			}
+			 pageInfo {
+        endCursor
+        hasNextPage
+      }
+    }
+  }
+}
+ fragment sharedOrganizationFields on Organization {
+  name
+  url
+}
+mutation AddStar($repositoryIdRobin: ID!) {
+  addStar(input: { starrableId: $repositoryIdRobin }) {
+    starrable {
+      id
+      viewerHasStarred
+    }
+  }
+}
+mutation AddStarFacebook($repositoryIdReact: ID!) {
+  addStar(input:  { starrableId: $repositoryIdReact }) {
+   starrable {
+      id
+      viewerHasStarred
+    }
+  }
+}
+
+{
+  "repositoryIdRobin": "MDEwOlJlcG9zaXRvcnk2MzM1MjkwNw==",
+  "repositoryIdReact": "MDEwOlJlcG9zaXRvcnkxMDI3MDI1MA==",
+  "login": "the-road-to-learn-react",
+  "withFork": true
+}
