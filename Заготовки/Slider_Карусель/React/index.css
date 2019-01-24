@@ -1,0 +1,19 @@
+.galery{
+	width: 150px;
+	margin: 0 auto;
+	text-align: center;
+}
+.galery .photos {
+	position: relative;
+	height: 125px;
+}
+.galery .photos img{
+	width: 100%;
+	position: absolute;
+	left: 0%;
+	opacity: 0;
+	transition: opacity 1.5s;
+}
+.galery .photos img.showed{
+	opacity: 1;
+}
